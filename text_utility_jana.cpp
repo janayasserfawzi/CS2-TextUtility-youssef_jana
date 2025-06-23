@@ -20,7 +20,7 @@ int counting_word(const char word[]){
 
 
 //this function counts the number of characters in a string
-//this strig doesn't have to be one word
+//this string doesn't have to be one word
 //numbers and symbols are counted as characters
 //spaces are not considered a character
 int counting_characters(const char word[]){
