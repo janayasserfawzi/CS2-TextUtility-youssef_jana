@@ -1,3 +1,5 @@
+#include "text_utility_jana.h"
+
 int counting_word(const char word[]){
     int count =0;
     if (strlen(word)== 0){
@@ -35,6 +37,9 @@ int counting_characters(const char word[]){
 
 }
 
+
+//Thank youu for this while loop it saved me a lot 
+//I'm sorry that I criticized you for using it 🙏
 void uppercasing(char* word){
     int i=0;
     while(word[i]!='\0'){
