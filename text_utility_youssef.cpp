@@ -105,3 +105,97 @@ int counting_sub(const char* word, const char* substr)
     }
     return counter;
 }
+
+
+
+
+void caeser_encryption(char* word,char* key)
+{
+    int word_size=0;
+    
+
+    while(word[word_size]!='\0')
+    {
+        word_size++;
+    }
+    word_size--;
+
+
+    char code[word_size+1];
+    int key_size=0;
+
+    while(word[key_size]!='\0')
+    {
+        key_size++;
+    }
+    key--;
+    for(int i=0; i<word_size;i++)
+    {
+        code[i]= key[i%key_size];   
+    }
+    cout<<code;
+
+}
+
+
+void caeser_encryption(char* word,char* key)
+{
+    int word_size=0;
+    
+
+    while(word[word_size]!='\0')
+    {
+        word_size++;
+    }
+    word_size--;
+
+    char code[word_size+1];
+    int key_size=0;
+
+    while(key[key_size]!='\0')
+    {
+        key_size++;
+    }
+    
+
+
+    for(int i=0; i<word_size;i++)
+    {
+        code[i]= key[i%key_size];   
+    }
+
+    for (int i=0; i <word_size; i++)
+        word[i]= (word[i]+code[i]);
+
+}
+
+void caeser_decryption(char* word,char* key)
+{
+    int word_size=0;
+    
+
+    while(word[word_size]!='\0')
+    {
+        word_size++;
+    }
+    word_size--;
+
+    char code[word_size+1];
+    int key_size=0;
+
+    while(key[key_size]!='\0')
+    {
+        key_size++;
+    }
+    
+
+
+    for(int i=0; i<word_size;i++)
+    {
+        code[i]= key[i%key_size];   
+    }
+
+    for (int i=0; i <word_size; i++)
+        word[i]= (word[i]-code[i]);
+
+}
