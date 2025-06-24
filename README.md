@@ -1,5 +1,34 @@
-# Project_team
-cs2_lab task
+# CS2-TextUtility Library
 
-#Functionality
-This library provides some functions that help you to deal with C-Style string to manage somethings like:
+## Overview
+A C++ text processing library implementing fundamental string operations using C-style strings (char arrays) only, developed for CSCE 1102 at The American University in Cairo.
+
+## Developers
+- **Youssef Ibrahim**  
+  📧 [youssefalaref@aucegypt.edu](mailto:youssefalaref@aucegypt.edu)  
+  🔧 Core string algorithms, Vigenère cipher
+
+- **Jana Yasser**  
+  📧 [janayasser@aucegypt.edu](mailto:janayasser@aucegypt.edu)  
+  🔧 Build system, testing, documentation
+
+## Features
+### 📜 Core Functions
+- `word_count()` - Count words in a string
+- `char_count()` - Count non-null characters  
+- `count_vowels_consonants()` - Vowel/consonant analysis
+- `reverse_string()` - In-place string reversal
+- `is_palindrome()` - Palindrome detection
+- `to_uppercase()`/`to_lowercase()` - Case conversion
+- `count_substring()` - Substring occurrences
+
+### 🔐 Bonus Feature
+- Vigenère cipher encryption/decryption
+
+## 🛠️ Build Instructions
+```bash
+git clone https://github.com/[your-username]/CS2-TextUtility.git
+cd CS2-TextUtility
+mkdir build && cd build
+cmake ..
+make
