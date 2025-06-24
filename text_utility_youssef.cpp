@@ -71,3 +71,37 @@ bool checking_palindrome(char* word) {
     }
     return is_palindrome;
 }
+
+
+
+//this function returns the count of the  cocurrence of substring inside specific string
+//it takes 2 parameters 0
+int counting_sub(const char* word, const char* substr) 
+{
+    int counter = 0;
+    int substr_len = 0;
+    
+    while(substr[substr_len] != '\0') {
+        substr_len++;
+    }
+    
+    if(substr_len == 0) return 0;
+    
+    for(int i = 0; word[i] != '\0'; i++) 
+    {
+        bool match = true;
+        for(int j = 0; substr[j] != '\0'; j++) 
+        {
+            if(word[i + j] == '\0' || substr[j] != word[i + j]) 
+            {
+                match = false;
+                break;
+            }
+        }
+        if(match) {
+            counter++;
+            i += substr_len - 1; 
+        }
+    }
+    return counter;
+}
