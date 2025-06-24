@@ -22,13 +22,4 @@ A C++ text processing library implementing fundamental string operations using C
 - `to_uppercase()`/`to_lowercase()` - Case conversion
 - `count_substring()` - Substring occurrences
 
-### 🔐 Bonus Feature
-- Vigenère cipher encryption/decryption
 
-## 🛠️ Build Instructions
-```bash
-git clone https://github.com/[your-username]/CS2-TextUtility.git
-cd CS2-TextUtility
-mkdir build && cd build
-cmake ..
-make
