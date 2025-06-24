@@ -6,11 +6,9 @@ A C++ text processing library implementing fundamental string operations using C
 ## Developers
 - **Youssef Ibrahim**  
   📧 [youssefalaref@aucegypt.edu](mailto:youssefalaref@aucegypt.edu)  
-  🔧 Core string algorithms, Vigenère cipher
 
 - **Jana Yasser**  
   📧 [janayasser@aucegypt.edu](mailto:janayasser@aucegypt.edu)  
-  🔧 Build system, testing, documentation
 
 ## Features
 ### 📜 Core Functions
