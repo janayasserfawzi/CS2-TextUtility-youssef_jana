@@ -1,8 +1,7 @@
 #include "text_utility_youssef.h"
 
 
-//This function return an array its first element is the vowels counts
-// and the second element is the consonatnts count
+//This function counts how many vowels and consonants in a word in a Pair struct
 Pair counting_vow_consonants(char* word)
 {
     lowercasing(word);
@@ -21,8 +20,7 @@ Pair counting_vow_consonants(char* word)
 
 
 
-//This function reverse a c-style array 
-// You should make sure that the array is not on the read-only memory
+//This function reverse the passed c-style string
 void reversing(char* word) {
     if (!*word)return;
 
@@ -73,10 +71,8 @@ bool checking_palindrome(char* word) {
 }
 
 
-
-//this function returns the count of the  cocurrence of substring inside specific string
-//it takes 2 parameters 0
-int counting_sub(const char* word, const char* substr) 
+//This function return the number of occurrence of specific substring in the c-string
+int counting_sub( const char* word,const char* substr) 
 {
     int counter = 0;
     int substr_len = 0;
@@ -109,40 +105,10 @@ int counting_sub(const char* word, const char* substr)
 
 
 
-void caeser_encryption(char* word,char* key)
+//This function encrypts specific text based on the provided key
+void caeser_encryption(char word[],char key[])
 {
     int word_size=0;
-    
-
-    while(word[word_size]!='\0')
-    {
-        word_size++;
-    }
-    word_size--;
-
-
-    char code[word_size+1];
-    int key_size=0;
-
-    while(word[key_size]!='\0')
-    {
-        key_size++;
-    }
-    key--;
-    for(int i=0; i<word_size;i++)
-    {
-        code[i]= key[i%key_size];   
-    }
-    cout<<code;
-
-}
-
-
-void caeser_encryption(char* word,char* key)
-{
-    int word_size=0;
-    
-
     while(word[word_size]!='\0')
     {
         word_size++;
@@ -150,25 +116,32 @@ void caeser_encryption(char* word,char* key)
     word_size--;
 
     char code[word_size+1];
-    int key_size=0;
 
+    int key_size=0;
     while(key[key_size]!='\0')
     {
         key_size++;
     }
-    
+    key_size--;
+
 
 
     for(int i=0; i<word_size;i++)
     {
-        code[i]= key[i%key_size];   
+        code[i]= key[i%(key_size-1)];   
     }
+    code[word_size+1]='\0';
+    cout<<code;
 
     for (int i=0; i <word_size; i++)
         word[i]= (word[i]+code[i]);
 
 }
 
+
+
+
+//This Function decrypts the word based on the key shared
 void caeser_decryption(char* word,char* key)
 {
     int word_size=0;
@@ -188,7 +161,6 @@ void caeser_decryption(char* word,char* key)
         key_size++;
     }
     
-
 
     for(int i=0; i<word_size;i++)
     {
