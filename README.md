@@ -19,5 +19,7 @@ A C++ text processing library implementing fundamental string operations using C
 - `is_palindrome()` - Palindrome detection
 - `to_uppercase()`/`to_lowercase()` - Case conversion
 - `count_substring()` - Substring occurrences
+- `ceasar_encryption()` - coding string
+- `ceasar_decryption()` - encoding string
 
 
