@@ -2,21 +2,32 @@
 
 
 //this function returns the number of words in a given string
-//single characters, numbers, or symbols are counted as whole words
+//single characters are counted as whole words
 int counting_word(const char word[]){
     int count =0;
     int i=0;
+    if(word[i] == '\0' || (word[i]==' ' && word[i+1]=='\0')){
+        return 0;
+    }
     while(word[i] != '\0')
-    {
-        if(word[i]==' ' &&word[i-1]!=' ' ){
-            count++;
+    { 
+        if(!isalpha(word[i])){
+            if(word[i]==' ' && isalpha(word[i+1]))
+            {
+            count ++;
+            }
+            
+            else
+            {
+            i++;
+            continue;
+            }
         }
         i++;
-
     }
-    
-    
-    
+    if(word[0]==' '){
+        count--;
+    }
     return ++count;
 }
 
@@ -39,7 +50,6 @@ int counting_characters(const char word[]){
     return count;
 
 }
-
 
 //this function changes the whole string into uppercase
 //it takes strings all in lowercase

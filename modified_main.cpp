@@ -6,12 +6,12 @@ int main() {
     char word_copy1[50], word_copy2[50];
     strcpy(word_copy1, word);  // Make copies for different operations
     strcpy(word_copy2, word);
+    char substr[] = "this";
     
     // Password test
     char password[] = "ENOUGH";
     char password_key[] = "jayou";
-    char password_copy[50];
-    strcpy(password_copy, password);
+
     
     // Counting vowels and consonants
     Pair x = counting_vow_consonants(word_copy1);
@@ -38,7 +38,6 @@ int main() {
     cout << "Palindrome: " << checking_palindrome(word) << endl;
     
     // Substring count
-    char substr[] = "this";
     cout << "number of substring: " << counting_sub(word, substr) << endl;
     
     // Encryption/decryption test
