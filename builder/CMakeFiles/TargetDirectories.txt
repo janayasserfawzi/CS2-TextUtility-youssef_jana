@@ -1,0 +1,3 @@
+/home/youssefalaref/Desktop/yarab5als/builder/CMakeFiles/my_program.dir
+/home/youssefalaref/Desktop/yarab5als/builder/CMakeFiles/edit_cache.dir
+/home/youssefalaref/Desktop/yarab5als/builder/CMakeFiles/rebuild_cache.dir

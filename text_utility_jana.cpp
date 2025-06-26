@@ -5,14 +5,16 @@
 //single characters, numbers, or symbols are counted as whole words
 int counting_word(const char word[]){
     int count =0;
-    while(*word != '\0')
+    int i=0;
+    while(word[i] != '\0')
     {
-        if(*word==' '){
+        if(word[i]==' ' &&word[i-1]!=' ' ){
             count++;
         }
-        word++;
+        i++;
 
     }
+    
     
     
     return ++count;

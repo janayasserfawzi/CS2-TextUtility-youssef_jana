@@ -14,5 +14,5 @@ Pair counting_vow_consonants(char* word);
 void reversing(char*);
 bool checking_palindrome(char*);
 int counting_sub(const char*,const char*);
-void caeser_encryption(char*,char*);
-void caeser_decryption(char*,char*);
+void caesar_encryption(char[],char[]);
+void caesar_decryption(char[],char[]);

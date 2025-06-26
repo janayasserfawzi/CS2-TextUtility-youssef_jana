@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/my_program.dir/main.cpp.o CMakeFiles/my_program.dir/text_utility_jana.cpp.o CMakeFiles/my_program.dir/text_utility_youssef.cpp.o -o my_program 

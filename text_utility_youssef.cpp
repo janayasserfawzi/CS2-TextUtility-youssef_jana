@@ -104,70 +104,75 @@ int counting_sub( const char* word,const char* substr)
 
 
 
+//This function encrypt the word based on the key shared
+//It's case sensitive
+void caesar_encryption(char word[], char key[]) {
+    int word_len = strlen(word);
+    int key_len = strlen(key);
 
-//This function encrypts specific text based on the provided key
-void caeser_encryption(char word[],char key[])
-{
-    int word_size=0;
-    while(word[word_size]!='\0')
-    {
-        word_size++;
+    if (key_len == 0||word_len==0) {
+        return;
     }
-    word_size--;
 
-    char code[word_size+1];
+    for (int i = 0; i < word_len; i++) {
+        char current_key = key[i % key_len]; 
+        int shift;
 
-    int key_size=0;
-    while(key[key_size]!='\0')
-    {
-        key_size++;
-    }
-    key_size--;
+        if (current_key >= 'A' && current_key <= 'Z') {
+            shift = current_key - 'A';
+        }
+        else if (current_key >= 'a' && current_key <= 'z') {
+            shift = current_key - 'a';
+        }
+        else {
+            shift = 0;  
+        }
 
-
-
-    for(int i=0; i<word_size;i++)
-    {
-        code[i]= key[i%(key_size-1)];   
-    }
-    code[word_size+1]='\0';
-    cout<<code;
-
-    for (int i=0; i <word_size; i++)
-        word[i]= (word[i]+code[i]);
-
+        if (word[i] >= 'A' && word[i] <= 'Z') {
+            word[i] = 'A' + ((word[i] - 'A' + shift) % 26);
+        }
+        else if (word[i] >= 'a' && word[i] <= 'z') {
+            word[i] = 'a' + ((word[i] - 'a' + shift) % 26);
+        }
+        }
 }
 
 
 
 
 //This Function decrypts the word based on the key shared
-void caeser_decryption(char* word,char* key)
-{
-    int word_size=0;
-    
+//It's case sensitive 
+void caesar_decryption(char word[], char key[]) {
+    int word_len = strlen(word);
+    int key_len = strlen(key);
 
-    while(word[word_size]!='\0')
-    {
-        word_size++;
-    }
-    word_size--;
-
-    char code[word_size+1];
-    int key_size=0;
-
-    while(key[key_size]!='\0')
-    {
-        key_size++;
+    if (key_len == 0 || word_len == 0) {
+        return;
     }
     
+    for (int i = 0; i < word_len; i++) {
+        char current_key = key[i % key_len]; 
+        int shift;
 
-    for(int i=0; i<word_size;i++)
-    {
-        code[i]= key[i%key_size];   
+        if (current_key >= 'A' && current_key <= 'Z') {
+            shift = current_key - 'A';
+        }
+        else if (current_key >= 'a' && current_key <= 'z') {
+            shift = current_key - 'a';
+        }
+        else {
+            shift = 0;  
+        }
+
+        if (word[i] >= 'A' && word[i] <= 'Z') {
+            int val = (word[i] - 'A' - shift) % 26;
+            if (val < 0) val += 26;  
+            word[i] = 'A' + val;
+        }
+        else if (word[i] >= 'a' && word[i] <= 'z') {
+            int val = (word[i] - 'a' - shift) % 26;
+            if (val < 0) val += 26;  
+            word[i] = 'a' + val;
+        }
     }
-
-    for (int i=0; i <word_size; i++)
-        word[i]= (word[i]-code[i]);
-
 }
