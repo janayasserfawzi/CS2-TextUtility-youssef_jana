@@ -7,7 +7,7 @@ A C++ text processing library implementing fundamental string operations using C
 - **Youssef Ibrahim**  
   📧 [youssefalaref@aucegypt.edu](mailto:youssefalaref@aucegypt.edu)  
 
-- **Jana Yasser**  
+- **Jana Fawzi**  
   📧 [janayasser@aucegypt.edu](mailto:janayasser@aucegypt.edu)  
 
 ## Features
